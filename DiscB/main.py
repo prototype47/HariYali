@@ -9,7 +9,7 @@ def get_aqi(city):
     querystring = {"city": city}
     headers = {
         'x-rapidapi-host': "air-quality-by-api-ninjas.p.rapidapi.com",
-        'x-rapidapi-key': "API_KEY"
+        'x-rapidapi-key': API_KEY
     }
     response = requests.request("GET", url, headers=headers, params=querystring)
     data = response.json()
@@ -35,4 +35,4 @@ async def on_message(message):
         await message.channel.send("> " + aqi)
 
 
-client.run("TOKEN")
+client.run(TOKEN)
