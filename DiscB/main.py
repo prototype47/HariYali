@@ -3,7 +3,7 @@ import discord
 import requests
 from discord.ext import commands
 
-intents = discord.Intents(members=True) 
+intents = discord.Intents(members=True)
 client = discord.Client(intents=intents)
 client = discord.Client()
 client = commands.Bot(command_prefix=">")
